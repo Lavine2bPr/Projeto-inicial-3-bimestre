@@ -2,7 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 
 :root {
-    --laranja-claro: #FF862A;
+    --laranja-claro: #4365ff;
+    --alto-contraste-fundo: #000000;
+    --alto-contraste-texto: #2aa2f1;
+    --alto-contraste-link: #3a9dfa;
 }
 
 body {
@@ -11,7 +14,7 @@ body {
 }
 
 header {
-    background-color: #ffffff;
+    background-image:url('Fundo\ de\ tel.jpg');
 }
 
 
@@ -21,13 +24,13 @@ section {
 
 
 .nav-link {
-    color: #CB6D43;
+    color: #1f3ab3;
     font-weight: 600;
 }
 
 .inicio-fundo {
     /* aula 3 */
-    background-image: url('img/4965007.jpg');
+    background-color: #26bfe6;
     /* Substitua pelo caminho da sua imagem */
     background-size: cover;
     background-position: right;
@@ -57,34 +60,31 @@ section {
 
 
 .botao-inicio {
-    background-color: var(--laranja-claro);
+    background-color: var(--azul-marinho);
     border-radius: 30px;
     border: none;
     width: 14em;
-    /* Convertido para em aumenta o tamanho da fonte por tabela*/
     height: 3em;
-    /* Convertido para em */
     align-content: center;
 
 }
 
 .display-4 {
-    text-shadow: -5px 5px var(--laranja-claro);
+    text-shadow: -5px 5px var(--azul-claro);
 }
 
 
-#tropicalia {
+#segredodosmares {
     position: relative;
     padding-top: 5rem;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    background: url('img/flor.png') top right no-repeat,
-        url('img/flor-esquerda.png') bottom left no-repeat;
+    background: url('Baleiazinha.jpg');
     background-size: 180px 180px;
     /* Ajuste o tamanho conforme necessário */
 }
 
-#tropicalia .container {
+#segredodomares .container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,22 +97,22 @@ section {
 h2 {
     font-family: 'Lemon', serif;
     font-size: 2.5em;
-    font-style: normal;
-    color: var(--laranja-claro);
+    font-style:normal;
+    color:var(--laranja-claro);
 }
 
 #galeria {
-    background-color: #FAF4F4;
+    background-color: #f0f0f0;
 
 }
 
 .fundo-galeria {
-    background: url('img/flor-bottom-direita.png') bottom right no-repeat;
-    background-size: 180px 180px;
+    background: url('Baleiazinha.jpg') bottom right no-repeat;
+    background-size: 370px 450px
 }
 
 #contato {
-    background-image: url('img/4965007.jpg');
+    background-color: #f0f0f0;
     background-size: cover;
     padding: 4rem 0;
     /* Espaçamento interno para a seção de contato */
@@ -131,12 +131,69 @@ h2 {
 }
 
 .formulario button {
-    background-color: #CB6D43;
+    background-color: #4389cb;
     border: none;
     font-weight: bold;
 }
 
-/* chama classe do bootstrap para modificar a cor */
 .form-control {
     background-color: #F1EDEF;
+}
+.menu-acessibilidade{
+    position: fixed;
+    top:2rem;
+    right:20px;
+    z-index: 1000;
+}
+
+.rotacao-botao{
+    transform: rotate(-90deg);
+    transform-origin: right center;
+}
+
+.opcoes-acessibilidade{
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.opcoes-acessibilidade button{
+    margin-bottom: 5px;
+}
+.apresenta-lista{
+    display: none;
+}
+
+.alto-contraste{
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste header,
+.alto-contraste footer,
+.alto-contraste .formulario{
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+.alto-contraste .nav-link{
+    color: var(--alto-contraste-link);
+}
+
+.alto-contraste .botao-inicio,
+.alto-contraste .formulario button,
+.alto-contraste .btn-primary{
+    background-color: var(--alto-contraste-link);
+    color: var(--alto-contraste-fundo)
+}
+
+.alto-contraste #segredodosmares {
+    background: none;
+}
+
+.alto-contraste #galeria {
+    background-color: var(--alto-contraste-fundo);
+}
+.alto-contraste .fundo-galeria {
+    background: none;
 }
